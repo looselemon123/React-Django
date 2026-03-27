@@ -1,0 +1,152 @@
+/* --- Global & Reset Basics --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+/* --- Hero Section (The Container) --- */
+.Hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px 60px 20px; 
+  background-color: #fdf7f2;
+  text-align: center;
+  border-bottom: 1px solid #f0efed;
+  margin-top: 150px;
+}
+
+.Hero h1 {
+  font-size: 4rem;
+  font-weight: 200; 
+  text-transform: uppercase;
+  letter-spacing: 10px; 
+  margin: 0;
+  color: #1a1a1a;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.Hero p {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  margin-top: 15px;
+  margin-bottom: 60px; /* Space before the product grid starts */
+  font-weight: 400;
+}
+
+/* --- Collection & Grid Logic --- */
+
+.Products {
+  padding-left:  70px;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px 25px;
+}
+
+/* --- Product Cards --- */
+.Product-Card {
+  margin-top: 100px;
+  background-color: #fff; /* White cards against the cream hero bg */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+}
+
+.Product-Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: #eee;
+}
+
+.Product-Card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 15px;
+  filter: grayscale(10%);
+  transition: all 0.5s ease;
+}
+
+.Product-Card:hover img {
+  filter: grayscale(0%);
+}
+
+.Product-Card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px 0 5px;
+  color: #222;
+  text-align: left;
+}
+
+/* Resetting the p tag inside Product-Card so it doesn't inherit Hero p styles */
+.Product-Card p {
+  font-size: 0.95rem;
+  color: #c4a484; 
+  font-weight: 700;
+  margin: 0 0 20px 0; 
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.Product-Card button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Pushes button to the bottom of the card */
+}
+
+.Product-Card button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* --- Search & Category Inputs (Below Hero) --- */
+.Hero-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 40px; 
+}
+
+.Hero-inputs input, 
+.Hero-inputs select {
+  padding: 15px 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  width: 300px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 0; /* Keeps it sharp */
+}
+
+.Hero-inputs input:focus, 
+.Hero-inputs select:focus {
+  border-color: #000;
+}
+
+/* Custom dropdown arrow for the select box */
+.Hero-inputs select {
+  cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
