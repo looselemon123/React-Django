@@ -1,0 +1,71 @@
+/* CONTACT SECTION */
+.Contact {
+  margin: 120px auto;
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 155px;
+  width: 35vw;
+}
+
+.Contact-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--black);
+  margin-bottom: 50px;
+  letter-spacing: 0.05em;
+}
+
+.Contact div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.Contact input {
+  width: 100%;
+  padding: 15px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.4s ease;
+}
+
+.Contact input::placeholder {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+.Contact input:focus {
+  border-bottom-color: var(--warm); 
+}
+
+.Contact input[placeholder="Enter Message"] {
+  padding-bottom: 50px; 
+}
+
+.Contact button {
+  margin-top: 30px;
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  padding: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Contact button:hover {
+  background-color: transparent;
+  color: var(--black);
+}
+
