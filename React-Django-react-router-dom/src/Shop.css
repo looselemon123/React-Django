@@ -1,0 +1,190 @@
+/* --- Global & Reset Basics --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust this to change how tall the banner is */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000; /* Dark background so text stays readable through low opacity */
+}
+
+.Hero-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the width/height without stretching */
+  
+  /* OPACITY CONTROL */
+  opacity: 0.5; /* Lower this number (0.1 to 0.9) to make the image more/less transparent */
+  
+  z-index: 1;
+}
+
+.Hero-content {
+  position: relative; /* This "lifts" the text above the absolute image */
+  z-index: 2; /* Higher than the image z-index */
+  text-align: center;
+  color: white; /* Contrast color for the text */
+}
+
+.Hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.Hero-content p {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out 0.3s forwards; /* 0.3s delay */
+  opacity: 0;
+}
+
+
+.Hero-inputs {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.Hero-inputs input{
+  margin-left: 80px;
+    padding: 15px 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  width: 300px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.Hero-inputs select{
+  margin-right: 80px;
+    padding: 15px 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  width: 300px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.Hero-inputs input:focus, 
+.Hero-inputs select:focus {
+  border-color: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  background-color: #fafafa;
+}
+
+.Products {
+  margin-top: 130px;
+  padding-left:  70px;
+  width: 1855px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px 25px;
+}
+
+.Product-Card {
+  justify-content: space-between;
+  margin: 50px 13px;
+  background-color: #fff; /* White cards against the cream hero bg */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.Product-Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: #eee;
+}
+
+.Product-Card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1), filter 0.5s ease;
+}
+
+.Product-Card:hover img {
+  transform: scale(1.08); /* Sophisticated zoom */
+  filter: grayscale(0%);
+}
+
+.Product-Card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px 0 5px;
+  color: #222;
+  text-align: left;
+}
+
+/* Resetting the p tag inside Product-Card so it doesn't inherit Hero p styles */
+.Product-Card p {
+  font-size: 0.95rem;
+  color: #c4a484; 
+  font-weight: 700;
+  margin: 0 0 20px 0; 
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.Product-Card button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Pushes button to the bottom of the card */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.Product-Card button:hover {
+  background-color: #fff;
+  color: #000;
+}

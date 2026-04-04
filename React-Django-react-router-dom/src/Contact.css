@@ -1,0 +1,122 @@
+.contact-page {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.contact-hero {
+  min-height: 90vh; 
+  padding: 180px 10% 100px 10%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 120px;
+  width: 100%;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 30px 0;
+}
+
+.contact-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 450px;
+}
+
+.contact-form-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 45px; 
+}
+
+.form-group-row {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-form-section input, 
+.contact-form-section textarea {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  background: transparent;
+  transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-form-section input:focus, 
+.contact-form-section textarea:focus {
+  border-bottom-color: #1a1a1a;
+}
+
+/* SECTION 2: BOUTIQUES */
+.contact-locations {
+  padding: 120px 10%;
+  background-color: #f9f9f9; /* Subtle contrast from the white top */
+  border-top: 1px solid #eee;
+}
+
+.location-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.location-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.location-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.location-card p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 80px;
+  }
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

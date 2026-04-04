@@ -1,0 +1,13 @@
+<div className="hero">
+        <div className="hero-left">
+          <div className="eyebrow">
+            <div className="eyebrow-line"></div>
+            <p className="eyebrow-text">New Autumn Collection 2026</p>
+          </div>
+          <h1 className="hero-h1">Where Artistry <em>Meets Beauty</em></h1>
+          <p className="hero-p">Luxury makeup crafted for the woman who sees beauty as a daily ritual, not a routine. Clean, conscious, and exquisitely formulated.</p>
+          <div className="hero-btns">
+            <button className="btn-fill">Explore Collection</button>
+            <button className="btn-ghost-text">Our Story</button>
+          </div>
+        </div>
